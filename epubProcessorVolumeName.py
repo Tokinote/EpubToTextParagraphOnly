@@ -3,7 +3,6 @@ import os
 import glob
 import re
 from bs4 import BeautifulSoup
-import pyperclip
 
 # Directory containing EPUB files
 epub_folder = "./"
@@ -61,8 +60,6 @@ for epub_path in epub_files:
     with open(output_txt, "w", encoding="utf-8") as f:
         f.write(combined_text)
 
-    # Copy to clipboard (last book processed)
-    pyperclip.copy(combined_text)
 
     print(f"✅ Processed '{epub_name}.epub' → Saved as '{epub_name}.txt'")
 
